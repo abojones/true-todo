@@ -55,7 +55,7 @@ export default class App extends Component {
     let item = {
       name: this.state.item,
       desc: this.state.desc,
-      dateCreated: new Date().toDateString(),
+      dateCreated: new Date().toLocaleString(),
       id,
       rank,
       remove: false
