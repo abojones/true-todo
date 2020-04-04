@@ -6,14 +6,14 @@ This is a react web app that allows you to create, delete and update items in a 
 
 In the project directory, you can run:
 
-### `npm run start`
+### `npm run dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:8081](http://localhost:8081) to view it in the browser. The page reloads if you make edits.
 
 ### `npm run test`
 
-Launches the test runner in the interactive watch mode. The tools used for unit testing are Jest and enzyme.
+Launches the test runner in the watch mode. The tools used for unit testing are Jest and enzyme.
 
 ### `npm run build`
 
