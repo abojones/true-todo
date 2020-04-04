@@ -47,11 +47,8 @@ export default class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const pendingList = this.managePending(),
-      rank = this.state.rank + 1;
-    let id = 1;
-    if (pendingList.length > 0) {
-      id = pendingList.map((elem) => elem.id).sort()[pendingList.length-1] + 1;
-    }
+      rank = this.state.rank + 1,
+      id = Date.now();
     let item = {
       name: this.state.item,
       desc: this.state.desc,
@@ -168,6 +165,9 @@ export default class App extends Component {
                           value={this.state.desc}
                           required={true}
                 />
+            </div>
+            <div className="instructions">
+              <p>Click on start recording to enable text input and list editing</p>
             </div>
             <button data-test-id="submit-btn"
                     className="btn submit-btn"
