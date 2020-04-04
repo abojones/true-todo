@@ -23,3 +23,4 @@ Builds the app for production to the `build` folder, bundling the files making t
 
 - Use server side rendering to improve speed and performance
 - Code splitting if the app grows
+- More extensive unit and behavioural testing
