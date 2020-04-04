@@ -17,9 +17,10 @@ Launches the test runner in the interactive watch mode. The tools used for unit 
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder, bundling the files making them deployment ready.
+Builds the app for production to the `build` folder, bundling the files making them deployment ready.
 
 ## Potential Improvements/ideas
 
 - Use server side rendering to improve speed and performance
 - Code splitting if the app grows
+- More extensive unit and behavioural testing
