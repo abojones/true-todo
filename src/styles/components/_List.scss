@@ -1,0 +1,12 @@
+.list {
+  width: 100%;
+  margin-top: 40px;
+  @media #{$tablet-up} {
+    margin-top: 0;
+    width: 48%;
+  }
+  h1 {
+    color: white;
+    margin-top: 0;
+  }
+}

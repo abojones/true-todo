@@ -29,6 +29,24 @@ describe('Component not Recording', () => {
     const recordBtn = findByTestAttr(wrapper, 'rec-ctrl');
     expect(recordBtn.text().toLowerCase()).toContain("start")
   });
+  test('"Clear" button clears what has been recorded', () => {
+    const state = {
+      activeList: [{
+        name: "Driving",
+        desc: "Driving lessons"
+      }],
+      pendingList: [{
+        name: "Skating",
+        desc: "Roller rink"
+      }],
+      recArmed: false,
+      rank: 0
+    };
+    wrapper = setup(state);
+    const clearBtn = findByTestAttr(wrapper, 'clear-btn');
+    clearBtn.simulate('click');
+    expect(wrapper.state().activeList.length + wrapper.state().pendingList.length).toBe(0)
+  })
 });
 
 describe('Component is recording', () => {
@@ -45,4 +63,8 @@ describe('Component is recording', () => {
     const recordBtn = findByTestAttr(wrapper, 'rec-ctrl');
     expect(recordBtn.text().toLowerCase()).toContain("stop")
   });
+  test('Play button disabled', () => {
+    const playBtn = findByTestAttr(wrapper, 'play-btn');
+    expect(playBtn.prop('disabled')).toBe(true)
+  })
 });
