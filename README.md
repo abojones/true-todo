@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm run dev`
 
-Runs the app in the development mode and automatically opens [http://localhost:7000](http://localhost:8081) to view it in the browser. The page reloads if you make edits.
+Runs the app in the development mode and automatically opens [http://localhost:7000](http://localhost:7000) to view it in the browser. The page reloads if you make edits.
 
 ### `npm run test`
 
