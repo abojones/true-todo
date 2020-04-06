@@ -1,11 +1,12 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const common = require("./webpack.common");
+const merge = require('webpack-merge');
 
-module.exports = {
-  entry: './src/index.js',
+module.exports = merge(common, {
+  mode: "development",
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'index_bundle.js'
+    filename: 'main.js'
   },
   module: {
     rules: [
@@ -22,7 +23,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './public/index.html'
-  })]
-};
+  devServer: {
+    port: '7000'
+  }
+});
